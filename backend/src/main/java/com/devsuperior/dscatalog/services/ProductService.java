@@ -73,7 +73,6 @@ public class ProductService {
 		}catch(DataIntegrityViolationException e) {
 			throw new DatabaseException("Integrity violation");
 		}
-
 	}
 	
 	private void copyDtoToEntity(ProductDTO dto, Product entity) {
