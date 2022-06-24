@@ -1,5 +1,15 @@
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Alex', 'Brown', 'alex@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+INSERT INTO tb_user (first_name, last_name, email, password) VALUES ('Maria', 'Green', 'maria@gmail.com', '$2a$10$eACCYoNOHEqXve8aIWT8Nu3PkMXWBaOxJ9aORUYzfMQCbVBIhZ8tG');
+
+INSERT INTO tb_role (authority) VALUES ('ROLE_OPERATOR');
+INSERT INTO tb_role (authority) VALUES ('ROLE_ADMIN');
+
+INSERT INTO tb_user_role (user_id, role_id) VALUES (1, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 1);
+INSERT INTO tb_user_role (user_id, role_id) VALUES (2, 2);
+
 INSERT INTO tb_category (name, created_At) VALUES ('Livros', NOW());
-INSERT INTO tb_category (name, created_At) VALUES ('Electronics', NOW());
+INSERT INTO tb_category (name, created_At) VALUES ('Eletrônicos', NOW());
 INSERT INTO tb_category (name, created_At) VALUES ('Computadores', NOW());
 
 INSERT INTO tb_product (name, price, date, description, img_url) VALUES ('The Lord of the Rings', 90.5, TIMESTAMP WITH TIME ZONE '2020-07-13T20:50:07.12345Z', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.', 'https://raw.githubusercontent.com/devsuperior/dscatalog-resources/master/backend/img/1-big.jpg');
@@ -54,17 +64,3 @@ INSERT INTO tb_product_category (product_id, category_id) VALUES (22, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (23, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (24, 3);
 INSERT INTO tb_product_category (product_id, category_id) VALUES (25, 3);
-
-
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Mariana', '30656825081', 1500.0, TIMESTAMP WITH TIME ZONE '1996-04-02T10:00:00Z', 1);
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Guilherme', '23054329097', 2000.0, TIMESTAMP WITH TIME ZONE '1995-03-13T10:00:00Z', 0);
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Andre', '68896849071', 1000.0, TIMESTAMP WITH TIME ZONE '2002-06-25T11:00:00Z', 0);
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Vanessa', '52291379089', 1750.0, TIMESTAMP WITH TIME ZONE '1992-04-02T09:00:00Z', 2);
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Alice', '19826586064', 2650.0, TIMESTAMP WITH TIME ZONE '1987-04-02T12:00:00Z', 3);
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('James', '10979315018', 3500.0, TIMESTAMP WITH TIME ZONE '1992-04-02T10:00:00Z', 1);
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Gabriela', '39405073001', 2830.0, TIMESTAMP WITH TIME ZONE '1997-03-13T10:00:00Z', 0);
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Felipe', '29855366000', 19000.0, TIMESTAMP WITH TIME ZONE '1994-06-25T12:00:00Z', 4);
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('Paulo', '64859870026', 3750.0, TIMESTAMP WITH TIME ZONE '1999-04-02T09:00:00Z', 0);
-INSERT INTO tb_client (name, cpf, income, birth_date, children) VALUES ('João', '72703466072', 5650.0, TIMESTAMP WITH TIME ZONE '1987-04-02T12:00:00Z', 1);
-
-
