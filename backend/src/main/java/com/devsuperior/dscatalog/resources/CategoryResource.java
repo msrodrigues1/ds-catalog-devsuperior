@@ -2,6 +2,8 @@ package com.devsuperior.dscatalog.resources;
 
 import java.net.URI;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -40,7 +42,7 @@ public class CategoryResource {
 	}
 	
 	@PostMapping
-	public ResponseEntity<CategoryDTO> insertCategory(@RequestBody CategoryDTO dto){
+	public ResponseEntity<CategoryDTO> insertCategory(@Valid @RequestBody CategoryDTO dto){
 		dto = service.insertCategory(dto);
 		URI uri = ServletUriComponentsBuilder
 					.fromCurrentRequest()
@@ -52,7 +54,7 @@ public class CategoryResource {
 	}
 	
 	@PutMapping(value = "/{id}")
-	public ResponseEntity<CategoryDTO> updateCategory(@PathVariable Long id ,@RequestBody CategoryDTO dto){
+	public ResponseEntity<CategoryDTO> updateCategory(@PathVariable Long id, @Valid @RequestBody CategoryDTO dto){
 		dto = service.updateCategory(id,dto);
 		return ResponseEntity.ok().body(dto);
 	}
